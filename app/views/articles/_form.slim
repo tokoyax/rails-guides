@@ -16,5 +16,11 @@
         = msg
 
     div
+      div
+        = form.label :status
+      div
+        = form.select :status, Article::VALID_STATUSES, selected: article.status || 'public'
+
+    div
       = form.submit
 
